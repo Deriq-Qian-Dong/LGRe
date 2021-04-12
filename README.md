@@ -51,3 +51,10 @@ To train LGRe, first download [pre-trained Vanilla BERT](https://macavaney.us/ce
 ```
 python train.py
 ```
+# Acknowledgement
+Some snippets of the codes are borrowed from 
+[NPRF](https://github.com/ucasir/NPRF),
+[Capreolus](https://github.com/capreolus-ir/capreolus),
+[dl4marco-bert](https://github.com/nyu-dl/dl4marco-bert),
+[SIGIR19-BERT-IR](https://github.com/AdeDZY/SIGIR19-BERT-IR),
+[CEDR](https://github.com/Georgetown-IR-Lab/cedr).
