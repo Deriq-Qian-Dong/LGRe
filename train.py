@@ -4,6 +4,7 @@ import torch
 import random
 import tempfile
 import modeling
+import argparse
 import pytrec_eval
 import torch.nn as nn
 from tqdm import tqdm
@@ -170,10 +171,13 @@ def write_run(rerank_run, runf):
                 runfile.write(f'{qid} Q0 {did} {i + 1} {score} run\n')
 
 
-if __name__ == '__main__':
+def main_cli():
+    parser = argparse.ArgumentParser('LGRe training and validation')
+    parser.add_argument('--fold', type=int, help='an integer for the flod')
+    args = parser.parse_args()
     model = MODEL_MAP["GNNRanker"]()
     model.return_rep = True
-    fold = 5  #1 2 3 4 5
+    fold = args.fold  #1 2 3 4 5
     model.load(os.path.join("cedr-models", 'vbert-robust-f%d.p' % fold))
     dataset = data.read_datafiles([open("data/robust/queries.tsv").readlines(),
                                    open("data/robust/documents.tsv").readlines()])
@@ -194,3 +198,7 @@ if __name__ == '__main__':
     eval_scores = trec_eval.evaluate(run_scores)
     print("models/gnn-cosqd-%d:" % fold, mean([d["P_20"] for d in eval_scores.values()]))
     write_run(run_scores, "models/gnn-cosqd-%d" % fold + "/gnn.run")
+
+
+if __name__ == '__main__':
+    main_cli()
