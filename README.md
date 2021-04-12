@@ -49,7 +49,7 @@ awk '{print $3}' data/robust/*.run | python extract_docs_from_index.py indri dat
 To train LGRe, first download [pre-trained Vanilla BERT](https://macavaney.us/cedr-models.tar) and placed in `data/cedr-models`, then use the following command:
 
 ```
-python train.py
+python train.py --fold n
 ```
 # Acknowledgement
 Some snippets of the codes are borrowed from 
