@@ -7,21 +7,21 @@ This code is tested on Python 3.6. Install dependencies using the following comm
 ```
 pip install -r requirements.txt
 ```
-We refer to [CEDR](https://github.com/Georgetown-IR-Lab/cedr) 's data processing practices.
-Many of these files are available in `data`.
+We refer to [CEDR](https://github.com/Georgetown-IR-Lab/cedr) 's data processing practices, and use [Robust04](https://trec.nist.gov/data/t13_robust.html) for example. After download this dataset, put in `data\robust04`.
+Many of files for training and evaluation are available in `data/robust`.
 
 **qrels**: a standard TREC-style query relevant file. Used for identifying relevant items for
-training pair generation and for validation.
+training pair generation and for validation(`data/robust/qrels`).
 
 **train_pairs**: a tab-deliminted file containing pairs used for training. The training process
-will only use query-document pairs found in this file.
+will only use query-document pairs found in this file(`data/robust/*.pairs`).
 File format:
 
 ```
 [query_id]	[doc_id]
 ```
 
-**valid_run**: a standard TREC-style run file for re-ranking items for validation.
+**valid_run**: a standard TREC-style run file for re-ranking items for validation(`data/robust/*.run`).
 
 **datafiles**: Files containing the text of queries and documents needed for training, validation,
 or testing. Should be in tab-delimited format as follows, where `[type]` is either `query` or `doc`,
@@ -33,7 +33,7 @@ tokenization done by `BertTokenizer`).
 [type]  [id]  [text]
 ```
 
-Queries for WebTrack and Robust are available in `data/*/queries.tsv`.
+Queries for WebTrack and Robust are available in `data/robust/queries.tsv`.
 Document text can be extracted from an index using `extract_docs_from_index.py` (be sure to use an
 index that has appropriate pre-processing). The script supports [Indri](http://www.lemurproject.org/indri/)
 indices. See instructions below for help installing [pyndri](https://github.com/cvangysel/pyndri).
