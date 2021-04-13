@@ -1,5 +1,5 @@
 # LGRe: Latent Graph Recurrent Network for Document Ranking
-Paper at [DASFAA 2021](http://dm.iis.sinica.edu.tw/DASFAA2021/index.html)
+Paper at [DASFAA 2021](https://link.springer.com/chapter/10.1007/978-3-030-73197-7_6)
 ## Getting started
 
 This code is tested on Python 3.6. Install dependencies using the following command:
