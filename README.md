@@ -21,7 +21,7 @@ This code is tested on Python 3.6. Install dependencies using the following comm
 ```
 pip install -r requirements.txt
 ```
-We follow CEDR's data processing practices, and use [Robust04](https://trec.nist.gov/data/t13_robust.html) for example. After download this dataset, put in `data/robust04`.
+We follow CEDR's data processing practices, and use [Robust04](https://trec.nist.gov/data/t13_robust.html) for example. After download this dataset, put it in `data/robust04`.
 Many of files for training and evaluation are available in `data/robust`.
 
 **qrels**: a standard TREC-style query relevant file. Used for identifying relevant items for
