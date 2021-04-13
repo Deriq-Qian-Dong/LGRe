@@ -1,5 +1,6 @@
 # LGRe: Latent Graph Recurrent Network for Document Ranking
 
+
 Paper at [DASFAA 2021](https://link.springer.com/chapter/10.1007/978-3-030-73197-7_6)
 If you use this work, please cite as: [bibtex](https://citation-needed.springer.com/v2/references/10.1007/978-3-030-73197-7_6?format=bibtex&flavour=citation)
 
