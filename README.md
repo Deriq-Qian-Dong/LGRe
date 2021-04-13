@@ -1,5 +1,18 @@
 # LGRe: Latent Graph Recurrent Network for Document Ranking
 Paper at [DASFAA 2021](https://link.springer.com/chapter/10.1007/978-3-030-73197-7_6)
+If you use this work, please cite as: [bibtex](https://citation-needed.springer.com/v2/references/10.1007/978-3-030-73197-7_6?format=bibtex&flavour=citation)
+
+```
+@InProceedings{LGRe,
+author="Dong, Qian
+and Niu, Shuzi",
+title="Latent Graph Recurrent Network for Document Ranking",
+booktitle="Database Systems for Advanced Applications",
+year="2021",
+publisher="Springer International Publishing",
+pages="88--103"
+}
+```
 ## Getting started
 
 This code is tested on Python 3.6. Install dependencies using the following command:
