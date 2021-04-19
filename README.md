@@ -65,6 +65,7 @@ To train LGRe, first download [pre-trained Vanilla BERT](https://macavaney.us/ce
 ```
 python train.py --fold n
 ```
+Our experiment was conducted on two GTX1080Ti.
 # Acknowledgement
 Some snippets of the codes are borrowed from 
 [NPRF](https://github.com/ucasir/NPRF),
